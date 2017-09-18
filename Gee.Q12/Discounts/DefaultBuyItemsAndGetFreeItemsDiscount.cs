@@ -27,7 +27,7 @@ namespace Gee.Q12.Discounts
 
             if (buyAmount < freeAmount)
             {
-                throw new ArgumentException("freeAmount", "Are you trying to make me out of business???");
+                throw new ArgumentException("freeAmount", "Are you trying to take me out of business???");
             }
 
             _buyAmount = buyAmount;
@@ -63,7 +63,7 @@ namespace Gee.Q12.Discounts
             //
             var numberOfFreeItems = totalNumberOfItems / ThresholdCount;
             //
-            // Order and group by price, so that it's easy to mark the free items
+            // Order cart items by price
             //
             var sortedCartItemsByPrice = cart.CartItems.OrderBy(item => item.UnitPrice).ToList();
 
